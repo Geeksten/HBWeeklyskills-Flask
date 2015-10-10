@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Skills: Flask</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/hackbright.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Hackbright Fellowship" href="#"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <p class="project">Hackbright Fellowship Fall 2015</p>
+          <a href="#">Skills: Flask</a>
+        
+        <a class="extlink" href="http://fellowship.hackbrightacademy.com"> &laquo; Back to Fellowship Homepage</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Skills: Flask</a><ul>
+<li><a class="reference internal" href="#setup">Setup</a></li>
+<li><a class="reference internal" href="#directions">Directions</a></li>
+<li><a class="reference internal" href="#further-study">Further Study</a></li>
+</ul>
+</li>
+</ul>
+</div>
+          
+        
+      </div>
+      &nbsp;
+
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Skills: Flask</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+          <div role="main" class="document">
+            
+  <div class="section" id="skills-flask">
+<h1>Skills: Flask<a class="headerlink" href="#skills-flask" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>First, create a virtual environment.</p>
+<pre class="console literal-block">
+$ <span class="cmd">virtualenv env</span>
+New python executable in env/bin/python
+Installing setuptools, pip...done.
+</pre>
+<p>Activate your environment.</p>
+<pre class="console literal-block">
+$ <span class="cmd">source env/bin/activate</span>
+(env) $
+</pre>
+<p>Install you requirements.</p>
+<pre class="console literal-block">
+(env) $ <span class="cmd">pip install flask</span>
+<span class="tan">...</span>
+Successfully installed flask Werkzeug Jinja2 itsdangerous markupsafe
+Cleaning up...
+</pre>
+</div>
+<div class="section" id="directions">
+<h2>Directions<a class="headerlink" href="#directions" title="Permalink to this headline">¶</a></h2>
+<p>Write a small Flask app in <cite>application.py</cite> that does the following:</p>
+<ul class="simple">
+<li>Serves the the template <strong>application-form.html</strong> at the route</li>
+</ul>
+<p><cite>/application-form</cite>.</p>
+<ul class="simple">
+<li>Handles submission of a form in <strong>application-form.html</strong> to</li>
+</ul>
+<p><cite>/application</cite>.</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Gets the first name, last name, salary, and job title from the
+request.</p>
+</li>
+<li><p class="first">Returns a response that acknowledges their application. This
+should repeat their name, title, and salary requirement, like:</p>
+<div class="highlight-python"><div class="highlight"><pre>Thank you, Jessica McHackbright, for applying to be a QA Engineer. Your
+minimum salary requirement is 89000 dollars.
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>(You&#8217;ll need to add a <tt class="docutils literal"><span class="pre">&lt;form&gt;</span></tt> to <strong>application-form.html</strong> that can capture</dt>
+<dd><p class="first last">the first name, last name, job title, and salary requirement data.)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="further-study">
+<h2>Further Study<a class="headerlink" href="#further-study" title="Permalink to this headline">¶</a></h2>
+<p>Create a new template called <strong>base.html</strong>. Have your other two templates
+inherit from <strong>base.html</strong> using Jinja&#8217;s <tt class="docutils literal"><span class="pre">{%</span> <span class="pre">extends</span> <span class="pre">%}</span></tt> and <tt class="docutils literal"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">%}</span></tt>
+syntax.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
