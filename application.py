@@ -68,7 +68,7 @@ def show_form():
     return render_template("application-form.html")
 
 
-@app.route("/application", methods=['GET', 'POST'])
+@app.route("/application", methods=['POST'])
 def application_response_page():
     """Handles submission of a form in application-form.html to/application.
 
@@ -80,10 +80,10 @@ def application_response_page():
         "Thank you, Jessica McHackbright, for applying to be a QA Engineer. Your
         minimum salary requirement is 89000 dollars."
     """
-    applicant_firstname = request.args.get("firstname")
-    applicant_lastname = request.args.get("lastname")
-    position_applied_for = request.args.get("position")
-    salary_requirement = request.args.get("salary")
+    applicant_firstname = request.form.get("firstname")
+    applicant_lastname = request.form.get("lastname")
+    position_applied_for = request.form.get("position")
+    salary_requirement = request.form.get("salary")
 
     return render_template('application-response.html', firstname=applicant_firstname,
                            lastname=applicant_lastname, position=position_applied_for,
