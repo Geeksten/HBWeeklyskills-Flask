@@ -1,13 +1,6 @@
-<!doctype html>
-<html>
-<head>
-  <title>Sample Home Page</title>
-    <!--<link rel="stylesheet" type="text/css" href="static/styles.css">-->
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}Melon Debuggers Inc.{% endblock %}
 
-<h1>This is the sample home page.</h1>
-<p><a href = '/application-form'> Hi! Click her to apply.</a></p>
-
-</body>
-</html>
+{% block content %}
+    <h2><a href = '/application-form'> Interested in any of our open positions? Click here to apply.</a></h2>
+{% endblock %}

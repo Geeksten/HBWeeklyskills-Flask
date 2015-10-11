@@ -1,50 +1,33 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <style>
-        img { 
-                width:100%; 
+{% extends 'base.html' %}
+{% block title %}Melon Debuggers Inc.{% endblock %}
 
-        }
-        </style>
-        <title>Skills-HTML-CSS</title>
-
-    </head>
-    <body>
-        <!-- your html goes here -->
-        <div>
-            <h1 class="brand">Melon Debuggers Inc</h1>
-            <h2>Employment Application</h2>
-        </div>
-        <div id="testimg">
-            <img src="http://previews.123rf.com/images/icetray/icetray1203/icetray120306962/12731424-Word-on-keyboard-made-in-3D-Stock-Photo-testing-software-computer.jpg" alt="Image of Test Button" width="128" height="300">
-        </div>
-        <div id="instruction">
-            <p>Melon Debuggers is looking for Software designers to help write Doctests for our clients. </p>
-            <p>The ideal candidate will be a selfstarter, not afraid to use Google or Stackoverflow and Python docs for reference and ready to live and breathe about melons.</p>
-        </div>  
-        <div id="jobapplication">
-            <form action="/application" method="GET">
-            <label for="firstname">First name *
-                <input type="text" name="firstname" id="inputback">
-            <br><br>
-            <label for="lastname">Last name *
-                <input type="text" name="lastname" class="lastname" id="inputback">
-            <br><br>
-            <label for="salary">Salary *
-                <input type="text" pattern="[0-9]*" name="salary" id="inputback">
-            <br><br>
-            <label for="position">Position applied for? *
-                 <select name="position" id="inputback">
-                      <option value="software engineer">Software Engineer</option>
-                      <option value="qa engineer">QA Engineer</option>
-                      <option value="product manager">Product Manager</option>
-                </select>
-            <br><br>
-            <input type="submit" name="submit" value="Submit" id="submit">
-            </form> 
-        </div>    
-    </body>
-</html>
+{% block content %}
+    <div>
+        <h2>Employment Application</h2>
+    </div>
+    <div id="instruction">
+        <p>Melon Debuggers is looking for Software designers to help write Doctests for our clients. </p>
+        <p>The ideal candidate will be a selfstarter, not afraid to use Google or Stackoverflow and Python docs for reference and ready to live and breathe about melons.</p>
+    </div><br>
+    <div id="jobapplication">
+        <form action="/application" methods="POST">
+        <label for="firstname">First name *
+            <input type="text" name="firstname" id="inputback">
+        <br><br>
+        <label for="lastname">Last name *
+            <input type="text" name="lastname" class="lastname" id="inputback">
+        <br><br>
+        <label for="salary">Salary *
+            <input type="text" pattern="[0-9]*" name="salary" id="inputback">
+        <br><br>
+        <label for="position">Position applied for? *
+             <select name="position" id="inputback">
+                  <option value="software engineer">Software Engineer</option>
+                  <option value="qa engineer">QA Engineer</option>
+                  <option value="product manager">Product Manager</option>
+            </select>
+        <br><br>
+        <input type="submit" name="submit" value="Submit" id="submit">
+        </form> 
+    </div>    
+{% endblock %}

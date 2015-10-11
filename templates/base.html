@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}TITLE GOES HERE{% endblock%}</title>        
+    <!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" /> 
+</head>
+<body> 
+    <div>
+        <h1 class="brand">Welcome to Melon Debuggers Inc</h1>
+    </div>
+    <div id="testimg">
+            <img src="http://previews.123rf.com/images/icetray/icetray1203/icetray120306962/12731424-Word-on-keyboard-made-in-3D-Stock-Photo-testing-software-computer.jpg" alt="Image of Test Button" width="128" height="350">
+    </div>
+        {% block content %}BODY CONTENT GOES HERE{% endblock %}
+    <footer>Copyright 2015 Melon Debuggers Inc</footer>
+</body>
+<html>

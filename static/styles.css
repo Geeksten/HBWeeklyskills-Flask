@@ -1,11 +1,13 @@
 /*your CSS goes here*/
-/*img{
-    width: 100%;
-}*/
 
 body{
     font-size:100%;
+    background-color:#99FFFF;
 }
+img { 
+    width:100%; 
+}
+
 h2{
     font-weight: bold;
     text-align: justify;
@@ -42,7 +44,7 @@ p{
 }
 #inputback{
     font-size: 1em;
-    background-color: yellow
+    background-color: yellow;
 }
 #inputfield{
     font-weight: bold;
